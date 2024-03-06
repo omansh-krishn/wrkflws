@@ -1,11 +1,8 @@
 name: Trigger Workflow
 
 on:
-  workflow_dispatch:
-    inputs:
-      tagname:
-        description: 'Tag Name'
-        required: true
+  repository_dispatch:
+    types: [new-release]
 
 jobs:
   build:
@@ -13,4 +10,4 @@ jobs:
     
     steps:
     - name: Run your job here
-      run: echo "Running workflow for tag ${{ github.event.inputs.tagname }}"
+      run: echo "Running workflow for tag ${{ github.event.client_payload.tagname }}"
