@@ -1,0 +1,16 @@
+name: Trigger Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      tagname:
+        description: 'Tag Name'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Run your job here
+      run: echo "Running workflow for tag ${{ github.event.inputs.tagname }}"
