@@ -11,6 +11,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
-          repository: omansh-krishn/wrkflws
+          repository: materialgram/arch
           event-type: new-release
-          client-payload: '{"tagname": "v6.9"}'
+          client-payload: '{"tagname": "v4.15.1.2"}'
