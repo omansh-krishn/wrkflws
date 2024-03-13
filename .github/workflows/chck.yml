@@ -6,11 +6,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
           repository: materialgram/arch
           event-type: new-release
-          client-payload: '{"tagname": "v4.15.1.2"}'
+          client-payload: '{"tagname": "v4.15.2.1"}'
