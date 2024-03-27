@@ -8,4 +8,8 @@ jobs:
     steps:
 
       - name: ECHO ECHO
-        run: echo "${{ github.run_number }}"
+        run: |
+          echo "${{ github.run_number }}"
+          echo "$GITHUB_RUN_ATTEMPT" || echo ${{ github.run_attempt }}
+          echo ${{ github.run_attempt }}
+
