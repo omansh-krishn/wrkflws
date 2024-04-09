@@ -12,4 +12,4 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: materialgram/materialgram-bin
           event-type: new-release
-          client-payload: '{"tagname": "v4.16.0.1", "pkgrel": "1"}'
+          client-payload: '{"tagname": "v4.16.4.1", "pkgrel": "2"}'
