@@ -10,6 +10,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
-          repository: materialgram/arch
+          repository: materialgram/materialgram-bin
           event-type: new-release
-          client-payload: '{"tagname": "v4.16.0.1"}'
+          client-payload: '{"tagname": "v4.16.0.1", "pkgrel": "1"}'
